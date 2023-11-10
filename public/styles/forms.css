@@ -1,0 +1,49 @@
+#login, #signup{
+    color:rgb(31, 31, 31);
+    width:400px;
+    margin:2rem auto;
+    background-color: rgb(209, 179, 236);
+    padding:1rem 1rem;
+    border-radius:8px;
+    box-shadow: 2px 2px 4px solid rgb(26, 1, 26);
+    
+    /* align-items: center; */
+}
+
+
+input{
+    display:block;
+    font:inherit;
+    margin:4px;
+    border-radius: 4px;
+    background-color: rgb(220, 213, 226);
+    
+}
+.form-control{
+    padding:0.5rem 0.5rem;
+    
+}
+
+.btn{
+    padding:8px 10px;
+    background-color: rgb(135, 95, 172);
+    margin:1rem 0;
+    border-radius:3px;
+    font:inherit;
+}
+
+.btn:hover {
+    
+    background-color: white;
+}
+
+.btn-alt:hover {
+    
+    background-color: rgb(135, 95, 172);}
+
+.btn-alt{
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 3px;
+    padding: 8px 10px;
+}

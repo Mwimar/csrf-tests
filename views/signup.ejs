@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+  </body>
+  <main id="signup">
+    <h1>Sign Up</h1>
+    <% if(hasError=true) {%>
+    <p id="input-error"><%= inputData.message %></p>
+    <% } %>
+    <form action="/signup" method="POST">
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="<%= inputData.email %>"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="confirm-email">Confirm Email</label>
+        <input
+          type="email"
+          name="confirm-email"
+          id="confirm-email"
+          value="<%= inputData.confirmEmail %>"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          value="<%= inputData.password %>"
+          required
+        />
+      </div>
+      <button class="btn">Signup</button>
+    </form>
+
+    <div id="auth-alternative">
+      <a class="btn btn-alt" href="/login">Login Instead</a>
+    </div>
+  </main>
+</html>
