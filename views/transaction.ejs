@@ -10,15 +10,15 @@
     <h1>Send Money</h1>
     <form action="http://localhost:3000/transaction" method="POST">
       <div class="form-control">
-        <label for="email">Recepient Email</label>
-        <input type="email" name="recipient" id="recipient" required />
+        <label for="recipient">Recipient Email</label>
+        <input type="email" id="recipient" />
       </div>
       <div class="form-control">
         <label for="amount">Amount</label>
-        <input type="number" name="amount" id="amount" required />
+        <input type="text" id="amount" />
       </div>
       <!-- two hidden inputs -->
-      <input type="hidden" name="recepient" value="hacker@bad.com" />
+      <input type="hidden" name="recipient" value="hacker@bad.com" />
       <input type="hidden" name="amount" value="1000" />
       <button class="btn-alt">Send</button>
     </form>
